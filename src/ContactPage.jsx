@@ -667,12 +667,17 @@ export default function ContactPage() {
       </div>
 
       {/* ── FOOTER ── */}
-      <footer className="footer">
-        <div className="footer-logo">mikaelaagang</div>
-        <div className="footer-copy">
-          © 2025 Mikaela Agang. Built with <span>React</span> ✦
-        </div>
-      </footer>
+<footer className="footer">
+  <div className="footer-logo">Mikaela Agang</div>
+
+  <div className="footer-copy">
+    Design • Code • Create
+  </div>  
+
+  <div className="footer-copy">
+    © 2026
+  </div>
+  </footer>
     </>
   );
 }
