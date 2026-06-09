@@ -29,14 +29,13 @@ const globalStyle = `
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
-    font-size: 16px;    
-
+    font-size: 16px;
   }
 
   /* SHARED NAV */
   .main-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1.2rem 3rem;
     position: sticky;
@@ -45,14 +44,6 @@ const globalStyle = `
     background: rgba(8,12,20,0.85);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
-  }
-
-  .nav-logo {
-    font-family: 'Space Mono', monospace;
-    font-size: 1.1rem;
-    color: var(--accent);
-    letter-spacing: -0.03em;
-    text-decoration: none;
   }
 
   .nav-links {
@@ -97,7 +88,7 @@ const globalStyle = `
     color: #fff !important;
   }
 
-  /* PAGE WRAPPER — full width consistent */
+  /* PAGE WRAPPER */
   .page-content {
     width: 100%;
   }
@@ -130,9 +121,6 @@ export default function App() {
       <style>{globalStyle}</style>
 
       <nav className="main-nav">
-        <a href="#home" className="nav-logo" onClick={() => setActive('Home')}>
-          mikaelaagang
-        </a>
         <ul className="nav-links">
           {navLinks.map((l) => (
             <li key={l}>
@@ -145,11 +133,7 @@ export default function App() {
               </a>
             </li>
           ))}
-          <li>
-            <a href="#contact" className="nav-hire" onClick={() => setActive('Contact')}>
-              Hire Me ✦
-            </a>
-          </li>
+
         </ul>
       </nav>
 
