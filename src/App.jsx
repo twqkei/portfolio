@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import HomePage from './HomePage'
 import AboutPage from './AboutPage'
 import ProjectsPage from './ProjectsPage'
@@ -5,8 +6,12 @@ import ContactPage from './ContactPage'
 
 const globalStyle = `
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
-  
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
   :root {
     --bg: #080c14;
@@ -21,7 +26,9 @@ const globalStyle = `
     --accent: #93c5fd;
   }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+  }
 
   body {
     background: var(--bg);
@@ -32,7 +39,7 @@ const globalStyle = `
     font-size: 16px;
   }
 
-  /* SHARED NAV */
+  /* NAVBAR */
   .main-nav {
     display: flex;
     justify-content: center;
@@ -63,29 +70,8 @@ const globalStyle = `
   }
 
   .nav-links a:hover,
-  .nav-links a.active { color: var(--accent); }
-
-  .nav-hire {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 700;
-    padding: 0.55rem 1.3rem;
-    background: var(--blue);
-    color: #fff !important;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    letter-spacing: 0.04em;
-    text-decoration: none;
-    transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
-    box-shadow: 0 0 16px rgba(37,99,235,0.4);
-  }
-
-  .nav-hire:hover {
-    background: var(--blue-bright) !important;
-    box-shadow: 0 0 28px rgba(59,130,246,0.6);
-    transform: translateY(-1px);
-    color: #fff !important;
+  .nav-links a.active {
+    color: var(--accent);
   }
 
   /* PAGE WRAPPER */
@@ -93,27 +79,37 @@ const globalStyle = `
     width: 100%;
   }
 
-  /* SHARED SECTION CONTAINER */
-  .section-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 5rem 4rem;
+  /* SECTION SPACING */
+  #home,
+  #about,
+  #projects,
+  #contact {
+    scroll-margin-top: 80px;
+  }
+
+  /* Reduce spacing between sections */
+  #about,
+  #projects,
+  #contact {
+    padding-top: 1rem;
   }
 
   @media (max-width: 900px) {
-    .main-nav { padding: 1rem 1.5rem; }
-    .section-container { padding: 3rem 1.5rem; }
+    .main-nav {
+      padding: 1rem 1.5rem;
+    }
   }
 
   @media (max-width: 600px) {
-    .nav-links { gap: 1rem; }
+    .nav-links {
+      gap: 1rem;
+    }
   }
 `
 
-import { useState } from 'react'
-
 export default function App() {
   const [active, setActive] = useState('Home')
+
   const navLinks = ['Home', 'About', 'Projects', 'Contact']
 
   return (
@@ -133,15 +129,25 @@ export default function App() {
               </a>
             </li>
           ))}
-
         </ul>
       </nav>
 
       <div className="page-content">
-        <div id="home"><HomePage /></div>
-        <div id="about"><AboutPage /></div>
-        <div id="projects"><ProjectsPage /></div>
-        <div id="contact"><ContactPage /></div>
+        <section id="home">
+          <HomePage />
+        </section>
+
+        <section id="about">
+          <AboutPage />
+        </section>
+
+        <section id="projects">
+          <ProjectsPage />
+        </section>
+
+        <section id="contact">
+          <ContactPage />
+        </section>
       </div>
     </>
   )

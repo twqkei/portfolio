@@ -24,7 +24,8 @@ const style = `
   .about-page {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 4rem 2rem 6rem;
+    padding: 1rem 2rem 2rem;
+
   }
 
   /* ── HERO SPLIT ── */
@@ -33,7 +34,8 @@ const style = `
     grid-template-columns: 340px 1fr;
     gap: 3rem;
     align-items: start;
-    margin-bottom: 5rem;
+      margin-bottom: 1.5rem;
+
   }
 
   /* LEFT — PHOTO */

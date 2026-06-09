@@ -23,10 +23,13 @@ const style = `
   .projects-wrap {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 4rem 1rem 6rem;
+    padding: 1rem 1rem 3rem;
+    padding-top: 1rem;
+
+
   }
 
-  .projects-header { margin-bottom: 3rem; }
+  .projects-header { margin-bottom: 2rem; }
 
   .projects-header h2 {
     font-size: clamp(1.8rem, 4vw, 2.6rem);
