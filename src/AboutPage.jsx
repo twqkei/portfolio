@@ -22,7 +22,7 @@ const icons = {
 
 const style = `
   .about-page {
-    max-width: 1400px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 4rem 2rem 6rem;
   }

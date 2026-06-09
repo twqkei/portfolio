@@ -170,7 +170,7 @@ const style = `
 
   /* ── CONTACT SECTION ── */
   .contact-section {
-    max-width: 1400px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 5rem 2rem 6rem;
     display: grid;

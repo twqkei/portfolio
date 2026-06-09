@@ -21,7 +21,7 @@ const style = `
   }
 
   .projects-wrap {
-    max-width: 1400px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 4rem 1rem 6rem;
   }
