@@ -7,7 +7,7 @@ import freshtify from './assets/freshtify.png'
 import safelink from './assets/safelink.png'
 import safelinkInfo from './assets/safelinkInfo.png'
 import freshtifyInfo from './assets/freshtifyInfo.png'
-
+import lifeadminInfo from './assets/lifeAdminInfo.png'
 const style = `
   :root {
     --bg: #080c14;
@@ -546,10 +546,6 @@ const laptopProjects = [
     features: [
     "One-Tap Emergency Request",
     "Real-Time Location & Availability",
-    "Smart Dispatch & Routing",
-    "Secure Patient Information Sharing",
-    "Alerts & Notifications",
-    "Integration &  Parterships"
   ]
   },
 ];
@@ -563,7 +559,7 @@ const phoneProjects = [
     desc: "A personal life management app to organize tasks, bills, appointments, and goals all in one place. Clean UI with smart reminders and daily planning tools.",
     tech: ["Android Studio", "Figma"],
     image: lifeadmin,
-    previewImage: lifeadmin,
+    previewImage: lifeadminInfo,
     url: null,
   },
   {
@@ -576,6 +572,10 @@ const phoneProjects = [
     image: freshtify,
     previewImage: freshtifyInfo,
     url: null,
+     features: [
+    "One-Tap Emergency Request",
+    "Real-Time Location & Availability",
+  ]
   },
   {
     id: 6,
@@ -592,8 +592,7 @@ const phoneProjects = [
     "Real-Time Location & Availability",
     "Smart Dispatch & Routing",
     "Secure Patient Information Sharing",
-    "Alerts & Notifications",
-    "Integration &  Parterships"
+
   ]
   },
 ];
