@@ -5,6 +5,8 @@ import dispatch from './assets/dispatch.png'
 import lifeadmin from './assets/lifeadmin.png'
 import freshtify from './assets/freshtify.png'
 import safelink from './assets/safelink.png'
+import safelinkInfo from './assets/safelinkInfo.png'
+import freshtifyInfo from './assets/freshtifyInfo.png'
 
 const style = `
   :root {
@@ -20,6 +22,24 @@ const style = `
     --accent: #93c5fd;
   }
 
+.features-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--blue-bright);
+  margin-bottom: 0.8rem;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.feature-item {
+  color: var(--text);
+  font-size: 0.82rem;
+}
   .projects-wrap {
     max-width: 1000px;
     margin: 0 auto;
@@ -212,12 +232,13 @@ const style = `
     border: 1px solid var(--border);
     border-radius: 18px;
     overflow: hidden;
-    max-width: 820px;
-    width: 100%;
+    max-width: 1300px;
+  width: 95%;
+  height:60vh;
     animation: scaleIn 0.25s ease;
     position: relative;
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1.8fr 1fr;
     max-height: 90vh;
   }
 
@@ -227,14 +248,13 @@ const style = `
   }
 
   .lightbox-preview {
-    background: var(--surface);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 1.5rem;
-    position: relative;
-    overflow: hidden;
-  }
+  background: var(--surface);
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0;
+  overflow: hidden;
+}
 
   .lightbox-preview::before {
     content: '';
@@ -284,21 +304,17 @@ const style = `
 
   /* phone preview in lightbox */
   .lb-phone-preview {
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-  }
-
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
   .lb-phone-preview img {
-    width: 100%;
-    display: block;
-    object-fit: contain;
-    border-radius: 8px;
-    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.5));
-  }
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 0;
+}
 
   .lb-placeholder {
     width: 100%;
@@ -527,6 +543,14 @@ const laptopProjects = [
     image: dispatch,
     previewImage: dispatch,
     url: "https://dispatch-frontend-one.vercel.app",
+    features: [
+    "One-Tap Emergency Request",
+    "Real-Time Location & Availability",
+    "Smart Dispatch & Routing",
+    "Secure Patient Information Sharing",
+    "Alerts & Notifications",
+    "Integration &  Parterships"
+  ]
   },
 ];
 
@@ -550,7 +574,7 @@ const phoneProjects = [
     desc: "A fresh produce delivery app connecting local farmers to consumers. Features product browsing, cart, order tracking, and seller dashboard.",
     tech: ["Android Studio", "Firebase", "Figma"],
     image: freshtify,
-    previewImage: freshtify,
+    previewImage: freshtifyInfo,
     url: null,
   },
   {
@@ -561,8 +585,16 @@ const phoneProjects = [
     desc: "An emergency response mobile app that connects users to ambulance services in real-time. Features SOS button, live map tracking, and responder routing.",
     tech: ["Android Studio", "Figma"],
     image: safelink,
-    previewImage: safelink,
+    previewImage: safelinkInfo,
     url: null,
+    features: [
+    "One-Tap Emergency Request",
+    "Real-Time Location & Availability",
+    "Smart Dispatch & Routing",
+    "Secure Patient Information Sharing",
+    "Alerts & Notifications",
+    "Integration &  Parterships"
+  ]
   },
 ];
 
@@ -688,8 +720,24 @@ export default function ProjectsPage() {
               <div className="lightbox-desc">{selected.desc}</div>
 
               <div className="lightbox-tech">
-                {selected.tech.map(function(t) { return <span key={t}>{t}</span>; })}
-              </div>
+  {selected.tech.map((t) => (
+    <span key={t}>{t}</span>
+  ))}
+</div>
+
+{selected.features && (
+  <>
+    <div className="features-label">KEY FEATURES</div>
+
+    <div className="features-item">
+      {selected.features.map((feature, i) => (
+        <div key={i} className="feature-check">
+          ✓ {feature}
+        </div>
+      ))}
+    </div>
+  </>
+)}
 
               {selected.url && (
                 <a
