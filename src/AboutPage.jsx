@@ -330,7 +330,6 @@ const skills = [
       { label: "Next.js",  icon: icons.nextjs,   color: "#e2e8f0" },
       { label: "Vite",     icon: icons.vite,     color: "#A259FF" },
       { label: "Tailwind", icon: icons.tailwind, color: "#38BDF8" },
-      { label: "HTML5",    icon: icons.html5,    color: "#E34F26" },
     ],
   },
   {
@@ -369,7 +368,7 @@ const education = [
   {
     year: "2020 – 2022",
     title: "Northlink Technological College",
-    school: "Technology and Livelihood Education (TLE) – ICT Strand CSS",
+    school: "Technical-Vocational-Livelihood (TVL) – ICT CSS",
   },
   {
     year: "2022 – 2026",
