@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import profilePhoto from "./assets/profile.png"; // 👈 Change this path to your actual photo
 
 const style = `
   .hero-wrap {
@@ -196,14 +197,18 @@ const style = `
     flex-shrink: 0;
   }
 
-  .pixel-cat-svg {
-    image-rendering: pixelated;
-    width: 210px; height: 210px;
+  .profile-photo {
+    width: 210px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 12px;  /* or remove this line for a sharp square */
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     animation: float 3.5s ease-in-out infinite;
     filter: drop-shadow(0 0 30px rgba(37,99,235,0.5));
+    border: 3px solid rgba(59,130,246,0.4);
   }
 
   @keyframes float {
@@ -299,35 +304,6 @@ const style = `
 
 const titles = ["UI/UX Designer", "Frontend Developer", "Mobile App Builder", "Creative Technologist"];
 
-const BigPixelCat = () => (
-  <svg className="pixel-cat-svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-    <rect x="5" y="1" width="4" height="4" fill="#9b6ee0"/>
-    <rect x="23" y="1" width="4" height="4" fill="#9b6ee0"/>
-    <rect x="6" y="2" width="2" height="2" fill="#c4a8ff"/>
-    <rect x="24" y="2" width="2" height="2" fill="#c4a8ff"/>
-    <rect x="4" y="5" width="24" height="18" fill="#8b5ed4"/>
-    <rect x="5" y="6" width="22" height="16" fill="#9b6ee0"/>
-    <rect x="8" y="10" width="6" height="5" fill="#e8e6f0"/>
-    <rect x="18" y="10" width="6" height="5" fill="#e8e6f0"/>
-    <rect x="10" y="11" width="3" height="3" fill="#1a1a24"/>
-    <rect x="20" y="11" width="3" height="3" fill="#1a1a24"/>
-    <rect x="10" y="11" width="1" height="1" fill="#e8e6f0"/>
-    <rect x="20" y="11" width="1" height="1" fill="#e8e6f0"/>
-    <rect x="15" y="17" width="2" height="2" fill="#c4a8ff"/>
-    <rect x="13" y="19" width="2" height="1" fill="#7c5cbf"/>
-    <rect x="17" y="19" width="2" height="1" fill="#7c5cbf"/>
-    <rect x="6" y="23" width="20" height="8" fill="#8b5ed4"/>
-    <rect x="7" y="24" width="18" height="6" fill="#9b6ee0"/>
-    <rect x="6" y="29" width="5" height="3" fill="#8b5ed4"/>
-    <rect x="13" y="29" width="6" height="3" fill="#8b5ed4"/>
-    <rect x="21" y="29" width="5" height="3" fill="#8b5ed4"/>
-    <rect x="28" y="20" width="3" height="10" fill="#9b6ee0"/>
-    <rect x="27" y="28" width="3" height="3" fill="#9b6ee0"/>
-    <rect x="7" y="16" width="3" height="2" fill="#c4a8ff" opacity="0.5"/>
-    <rect x="22" y="16" width="3" height="2" fill="#c4a8ff" opacity="0.5"/>
-  </svg>
-);
-
 export default function HomePage() {
   const [displayed, setDisplayed] = useState("");
   const [titleIndex, setTitleIndex] = useState(0);
@@ -402,7 +378,12 @@ export default function HomePage() {
             <span className="deco deco-4" />
             <span className="deco deco-5" />
             <span className="deco deco-6" />
-            <BigPixelCat />
+            {/* 👇 Replace BigPixelCat with your photo */}
+            <img
+              src={profilePhoto}
+              alt="Mikaela"
+              className="profile-photo"
+            />
           </div>
         </div>
 
@@ -411,16 +392,6 @@ export default function HomePage() {
           <div className="scroll-arrow" />
         </div>
       </section>
-
-      <div className="trusted-section">
-        <span className="trusted-label">BUILT WITH</span>
-        <div className="trusted-divider" />
-        <div className="trusted-tags">
-          {["React", "Next.js", "React Native", "Figma", "Node.js", "Firebase", "Tailwind", "Expo"].map((t) => (
-            <span className="trusted-tag" key={t}>{t}</span>
-          ))}
-        </div>
-      </div>
     </>
   );
 }
