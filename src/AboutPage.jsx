@@ -117,7 +117,7 @@ const style = `
   }
 
   .about-intro h1 {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: 2.4rem;
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 0.5rem;
