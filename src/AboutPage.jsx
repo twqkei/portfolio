@@ -362,30 +362,41 @@ const skills = [
 
 const education = [
   {
-    year: "2021 – 2025",
-    title: "BS Information Technology",
-    school: "Davao del Norte State College",
+    year: "2016 – 2020",
+    title: "Carmen National High School",
+    school: "Cookery",
   },
   {
-    year: "2019 – 2021",
-    title: "Senior High School — STEM",
-    school: "Your School Name",
+    year: "2020 – 2022",
+    title: "Northlink Technological College",
+    school: "Technology and Livelihood Education (TLE) – ICT Strand CSS",
   },
+  {
+    year: "2022 – 2026",
+    title: "Davao del Norte State College",
+    school: "Bachelor of Science in Information Technology",
+  }
 ];
 
 const experience = [
-  {
-    year: "2024 – Present",
-    role: "English Secondary Teacher",
-    company: "Glats Inc.",
-    desc: "Teach English online to students of different ages and levels, creating personalized lessons and providing regular feedback.",
-  },
   {
     year: "2022 – 2023",
     role: "Social Media Evaluator",
     company: "Appen",
     desc: "Analyzed online ads for relevance, categorized content, and provided quality feedback.",
   },
+  {
+    year: "2024 – 2026",
+    role: "English Secondary Teacher",
+    company: "Glats Inc.",
+    desc: "Teach English online to students of different ages and levels, creating personalized lessons and providing regular feedback.",
+  },
+  {
+    year: "2026",
+    role: "Programmer",
+    company: "DNSC - Office of the Presidential Affairs",
+    desc: "Developed Dispatch Requisitioning System for DNSC school vehicles",
+  }
 ];
 
 function useFadeIn() {
@@ -439,9 +450,12 @@ export default function AboutPage() {
               <div className="about-intro">
                 <h1>About <span>Me</span></h1>
                 <p>
-                  I'm a passionate creative developer and designer who loves building digital
-                  products that users actually enjoy. I believe good design and clean code go
-                  hand in hand — whether it's a web system, mobile app, or a fresh UI from scratch.
+                  Hi! My name is Mikaela Agang. I have experience in web design, 
+                  programming, and documentation. Throughout my college years, 
+                  I worked on various projects that helped me improve my problem-solving, 
+                  leadership, and sense of responsibility. These experiences have helped 
+                  shape who I am today and strengthened my confidence in my knowledge, 
+                  particularly in programming and web design, which I am passionate about.
                 </p>
               </div>
 
