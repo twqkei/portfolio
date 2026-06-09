@@ -123,7 +123,7 @@ const style = `
 
   /* phone mockup images — no forced aspect ratio, just contain the image */
   .phone-mockup-wrap {
-    width: 100%;
+    width: 150%;
     display: flex;
     justify-content: center;
     transition: filter 0.25s;
@@ -284,7 +284,7 @@ const style = `
 
   /* phone preview in lightbox */
   .lb-phone-preview {
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     z-index: 1;
